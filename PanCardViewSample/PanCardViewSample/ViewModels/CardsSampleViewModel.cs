@@ -52,8 +52,9 @@ namespace PanCardViewSample.ViewModels
 
             GoToLastCommand = new Command(() =>
             {
-                CurrentIndex = Items.Count - 1;
-            });
+				Items.Add(new { Source = CreateSource(), Ind = _imageCount++, Color = Color.Red, Title = "Other" });
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Items)));
+			});
 		}
 
 		public ICommand PanPositionChangedCommand { get; }

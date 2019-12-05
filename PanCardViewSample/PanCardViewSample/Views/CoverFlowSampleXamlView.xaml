@@ -53,7 +53,7 @@
 
         </cards:CoverFlowView>
         
-        <Button Text="TO LAST" Command="{Binding GoToLastCommand}" />
+        <Button Text="UPDATE" Command="{Binding GoToLastCommand}" />
         
     </StackLayout>
     
